@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_referencia_recursos_componentes/ColunasLinhas.dart';
+import 'package:app_referencia_recursos_componentes/FormatacoesTexto.dart';
+
 
 class TelaPrincipal extends StatefulWidget {
   const TelaPrincipal({super.key});
@@ -30,13 +32,13 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                   "Conheça os recursos que você pode utilizar na construção do seu APP",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold
                   ),
                 )
             ),
             Padding(
-              padding: EdgeInsets.all(40),
+              padding: EdgeInsets.all(5),
               child:
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -59,7 +61,30 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 child: Text("COLUNAS E LINHAS"),
               ),
             ),
-
+            Padding(
+              padding: EdgeInsets.all(5),
+              child:
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.black87,
+                  backgroundColor: Colors.greenAccent,
+                  minimumSize: Size(88, 36),
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(2)),
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TelaFormatacoesTexto()
+                      )
+                  );
+                },
+                child: Text("FORMATAÇÕES DE TEXTOS"),
+              ),
+            ),
           ],
         ),
       ),

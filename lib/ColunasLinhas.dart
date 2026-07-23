@@ -17,7 +17,12 @@ class _TelaColunasLinhasState extends State<TelaColunasLinhas> {
         padding: EdgeInsets.all(32),
         child: Column(
           children: <Widget>[
-            Text("Tela Colunas e Linhas!!!!")
+            Text("Tela Colunas e Linhas!!!!"),
+          Row(children: <Widget>[
+            Text(" LINHA 1 "),
+            Text(" LINHA 2 "),
+            Text(" LINHA 3 ")
+          ]),
           ],
         ),
       ),
